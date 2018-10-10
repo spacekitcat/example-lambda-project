@@ -1,0 +1,28 @@
+{
+  "name": "test-lambda",
+  "version": "0.1.0",
+  "description": "A simple Lambda for Nodev8",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/spacekitcat/test-lambda.git"
+  },
+  "keywords": [
+    "lambda",
+    "node",
+    "js"
+  ],
+  "author": "Lisa Burton",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/spacekitcat/test-lambda/issues"
+  },
+  "homepage": "https://github.com/spacekitcat/test-lambda#readme",
+  "devDependencies": {},
+  "dependencies": {
+    "async": "^2.6.1"
+  }
+}
