@@ -1,16 +1,18 @@
 AWSTemplateFormatVersion: '2010-09-09'
 Transform: AWS::Serverless-2016-10-31
-Description: Outputs the time
+Description: Gets inspirational quotes
 Resources:
-  TimeFunction:
+  ReadQuotes:
     Type: AWS::Serverless::Function
     Properties:
       Handler: handler.handler
       Runtime: nodejs8.10
-      CodeUri: ./
+      CodeUri:
+        Bucket: !Ref BucketName
+        Key: !Ref CodeKey
       Events:
-        MyTimeApi:
+        ReadQuotes:
           Type: Api
           Properties:
-            Path: /test-lambda
+            Path: /quotes
             Method: GET
