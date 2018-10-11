@@ -1,10 +1,12 @@
+let readQuotes = require('./quote-store');
+
 exports.handler = function(event, context, callback) {
   console.log('Lambda start');
 
   const response = {
     statusCode: 200,
     body: JSON.stringify({
-      message: 'Buy the ticket, take the ride.'
+      message: readQuotes()[2]
     })
   };
 
