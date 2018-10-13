@@ -13,8 +13,9 @@ Created a simple lambda (this repo), configured an AWS Code Pipe Line to watch t
 
 
 # Details
-API endpoint: https://j1gmykxabc.execute-api.eu-west-2.amazonaws.com/default/test-lambda
+API endpoint: https://0oh2lziyu6.execute-api.eu-west-2.amazonaws.com/Live/
 
 # Reference material
 
-[Amazon tutorial for creating a Node deployment PKG](https://docs.aws.amazon.com/lambda/latest/dg/nodejs-create-deployment-pkg.html)
+- [Amazon tutorial for creating a Node deployment PKG](https://docs.aws.amazon.com/lambda/latest/dg/nodejs-create-deployment-pkg.html)  
+- [AWS CloudFormation user guide](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-ug.pdf)
