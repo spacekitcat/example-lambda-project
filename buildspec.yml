@@ -4,9 +4,9 @@ phases:
     commands:
       - npm install
       - npm run build
-      - aws cloudformation package --template-file samTemplate.yaml --s3-bucket codepipeline-eu-west-2-803917972218 --output-template-file outputSamTemplate.yaml
+      - aws cloudformation package --template-file samTemplate.yaml --output-template-file outputSamTemplate.yaml --s3-bucket getquotesdeploymentstore
 artifacts:
+  discard_paths: yes
   type: zip
   files:
-    - samTemplate.yaml
-    - outputSamTemplate.yaml
+    - ./*

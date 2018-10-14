@@ -29,6 +29,7 @@
     "babel-core": "^7.0.0-bridge.0"
   },
   "dependencies": {
-    "async": "^2.6.1"
+    "async": "^2.6.1",
+    "aws-sdk": "^2.334.0"
   }
 }

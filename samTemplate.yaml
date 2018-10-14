@@ -1,18 +1,10 @@
 AWSTemplateFormatVersion: '2010-09-09'
 Transform: AWS::Serverless-2016-10-31
-Description: Gets inspirational quotes
 Resources:
   ReadQuotes:
     Type: AWS::Serverless::Function
     Properties:
-      Handler: handler.handler
+      CodeUri: ./
+      Handler: dist/handler.handler
       Runtime: nodejs8.10
-      CodeUri:
-        Bucket: !Ref BucketName
-        Key: !Ref CodeKey
-      Events:
-        ReadQuotes:
-          Type: Api
-          Properties:
-            Path: /quotes
-            Method: GET
+      FunctionName: ReadQuotes

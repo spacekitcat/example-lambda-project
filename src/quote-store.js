@@ -10,6 +10,6 @@ const quoteList = [
   'Boy, I tell ya, they only come out at night. Or in this case, the daytime. -Chief Wiggum'
 ];
 
-const getQuotes = quoteList;
+const readQuotes = () => quoteList;
 
-export default () => getQuotes;
+export default readQuotes;

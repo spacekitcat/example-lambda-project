@@ -1,4 +1,4 @@
-let readQuotes = require('./quote-store');
+import readQuotes from './quote-store';
 
 exports.handler = function(event, context, callback) {
   console.log('Lambda start');
