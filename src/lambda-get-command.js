@@ -6,7 +6,7 @@ const execute = () => {
     return ({
         statusCode: 200,
         body: JSON.stringify({
-            message: sourceQuotes[0]
+            message: sourceQuotes[ Math.floor(Math.random() * sourceQuotes.length)]
         })
     });
 }
