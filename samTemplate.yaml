@@ -1,10 +1,56 @@
 AWSTemplateFormatVersion: '2010-09-09'
 Transform: AWS::Serverless-2016-10-31
 Resources:
-  ReadQuotes:
-    Type: AWS::Serverless::Function
+  ReadQuotesApiGateway:
+    Type: AWS::ApiGateway::RestApi
     Properties:
-      CodeUri: ./
+      Name: quotes
+      Description: Fetches motivational quotes.
+      EndpointConfiguration:
+        Types: [ REGIONAL ]
+  ReadQuotesApiResource:
+    Type: AWS::ApiGateway::Resource
+    Properties:
+      PathPart: quote
+      ParentId:
+        Fn::GetAtt:
+          - ReadQuotesApiGateway
+          - RootResourceId
+      RestApiId:
+        Ref: ReadQuotesApiGateway
+  ReadQuotesApiGatewayRootMethod:
+    Type: AWS::ApiGateway::Method
+    Properties:
+      AuthorizationType: NONE
+      HttpMethod: GET
+      ResourceId:
+        Ref: ReadQuotesApiResource
+      RestApiId:
+        Ref: ReadQuotesApiGateway
+      Integration:
+        Credentials: arn:aws:iam::269582088082:role/ReadQuotesLambdaExecutionServiceUser
+        IntegrationHttpMethod: POST
+        Type: AWS
+        Uri:
+          Fn::Join:
+            - ""
+            - - "arn:aws:apigateway:"
+              - !Ref "AWS::Region"
+              - ":lambda:path/"
+              - "/2015-03-31/functions/"
+              - Fn::GetAtt:
+                - ReadQuotes
+                - Arn
+              - "/invocations"
+        IntegrationResponses:
+          - StatusCode: 200
+      MethodResponses:
+        - StatusCode: 200
+  ReadQuotes:
+    Type: AWS::Lambda::Function
+    Properties:
+      Code: ./
       Handler: dist/handler.handler
       Runtime: nodejs8.10
       FunctionName: ReadQuotes
+      Role: arn:aws:iam::269582088082:role/ReadQuotesLambdaExecutionServiceUser
