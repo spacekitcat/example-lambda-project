@@ -5,6 +5,7 @@ phases:
       - npm install
       - npm run build
       - aws cloudformation package --template-file samTemplate.yaml --output-template-file outputSamTemplate.yaml --s3-bucket getquotesdeploymentstore
+      - aws cloudformation deploy --template-file outputSamTemplate.yaml --stack-name readquotes-cloudformation-stack --capabilities CAPABILITY_NAMED_IAM
 artifacts:
   discard_paths: yes
   type: zip
