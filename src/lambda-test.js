@@ -1,3 +1,3 @@
-import readQuotes from './quote-store';
+import lambdaGetCommand from './lambda-get-command';
 
-console.log(readQuotes());
+console.log(lambdaGetCommand.execute());

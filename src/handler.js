@@ -1,15 +1,7 @@
-import readQuotes from './quote-store';
+import lambdaGetCommand from './lambda-get-command';
 
-exports.handler = function(event, context, callback) {
+exports.handler = function (event, context, callback) {
   console.log('Lambda start');
-
-  const response = {
-    statusCode: 200,
-    body: JSON.stringify({
-      message: readQuotes()[2]
-    })
-  };
-
+  callback(null, lambdaGetCommand.execute());
   console.log('Lambda end');
-  callback(null, response);
 };

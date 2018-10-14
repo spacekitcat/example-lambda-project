@@ -4,8 +4,9 @@
   "description": "A simple Lambda for Nodev8",
   "main": "index.js",
   "scripts": {
+    "prebuild": "npm run test",
     "build": "babel src --out-dir dist",
-    "test": "jest"
+    "test": "jest --coverage"
   },
   "repository": {
     "type": "git",
@@ -26,7 +27,8 @@
     "@babel/cli": "^7.1.0",
     "@babel/core": "^7.1.0",
     "@babel/preset-env": "^7.1.0",
-    "babel-core": "^7.0.0-bridge.0"
+    "babel-core": "^7.0.0-bridge.0",
+    "jest": "^23.6.0"
   },
   "dependencies": {
     "async": "^2.6.1",

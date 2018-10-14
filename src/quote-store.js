@@ -12,4 +12,4 @@ const quoteList = [
 
 const readQuotes = () => quoteList;
 
-export default readQuotes;
+export default { readQuotes };
