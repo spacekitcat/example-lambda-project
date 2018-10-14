@@ -4,7 +4,6 @@
   "description": "A simple Lambda for Nodev8",
   "main": "index.js",
   "scripts": {
-    "prebuild": "npm run test",
     "build": "babel src --out-dir dist",
     "test": "jest --coverage"
   },
