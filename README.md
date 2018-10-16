@@ -23,3 +23,4 @@ Uses a combination of CodePipeline and CloudFormation to provision rebuild, repr
 
 - [Amazon tutorial for creating a Node deployment PKG](https://docs.aws.amazon.com/lambda/latest/dg/nodejs-create-deployment-pkg.html)  
 - [AWS CloudFormation user guide](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-ug.pdf)
+- [AWS API Gateway developer guide](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-dg.pdf)
