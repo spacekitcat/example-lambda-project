@@ -17,7 +17,7 @@ Uses a combination of CodePipeline and CloudFormation to provision rebuild, repr
 
 ## Details
 
-- [Actual API endpoint for the Lambda](https://0oh2lziyu6.execute-api.eu-west-2.amazonaws.com/Live/)
+- The actual endpoint for the Lambda: [https://api.spacekitcat.com/v1/quote](https://api.spacekitcat.com/v1/quote)
 
 ## Reference material
 
