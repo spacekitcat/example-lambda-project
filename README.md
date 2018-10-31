@@ -15,6 +15,10 @@ Created a simple lambda (this repo), configured an AWS Code Pipe Line to build a
 
 Uses a combination of CodePipeline and CloudFormation to provision rebuild, reprovision and redeploy the Lambda when a commit is made to Github. The Lambda is exposed via ApiGateway.
 
+## TODO
+
+When this repository is committed to, it will trigger a rebuild and redeploy of the API, but it won't redeploy the stage. It's analogous to a class vs an instance of a class in the Onject Oriented (OO) paradigm, it redefines the API (class) but doesn't update the current instance. It would be good to automate this one manual step to make the entire build and deploy process automatic.
+
 ## Details
 
 - The actual endpoint for the Lambda: [https://api.spacekitcat.com/v1/quote](https://api.spacekitcat.com/v1/quote)
